@@ -152,16 +152,16 @@
         };
 
         media {
-// -----------------------------------------------------------------------------------------------------
-// |     |      |      |       |       |      | # | BOOTLOAD | EP_OFF | BR_D   | BR_U   | EP_ON  |     |
-// |     | LGUI | LALT | LCTRL | LSHFT |      | # | RESET    | PREV   | VOL_D  | VOL_U  | NEXT   |     |
-// |     |      | RALT |       |       |      | # | OUT_BLE  | BT_0   | BT_PRV | BT_NXT | BT_CLR |     |
+// ------------------------------------------------------------------------------------------------------
+// |     |      |      |       |       |      | # | BOOTLOAD | EP_OFF | BR_D   | BR_U   | EP_ON  | BT_1 |
+// |     | LGUI | LALT | LCTRL | LSHFT |      | # | RESET    | PREV   | VOL_D  | VOL_U  | NEXT   | BT_2 |
+// |     |      | RALT |       |       |      | # | OUT_BLE  | BT_0   | BT_PRV | BT_NXT | BT_CLR | BT_3 |
 //                     | HELD  |       |      | # | STOP     | PLAY   | MUTE   |
 
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans        &bootloader   &ext_power EP_OFF  &cp C_BRI_DN  &cp C_BRI_UP  &ext_power EP_ON  &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans        &reset        &cp C_PREV         &cp C_VOL_DN  &cp C_VOL_UP  &cp C_NEXT        &trans
-&trans  &trans    &kp RALT  &trans     &trans     &trans        &out OUT_BLE  &bt BT_SEL 0       &bt BT_PRV    &bt BT_NXT    &bt BT_CLR        &trans
+&trans  &trans    &trans    &trans     &trans     &trans        &bootloader   &ext_power EP_OFF  &cp C_BRI_DN  &cp C_BRI_UP  &ext_power EP_ON  &bt BT_SEL 1
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans        &sys_reset    &cp C_PREV         &cp C_VOL_DN  &cp C_VOL_UP  &cp C_NEXT        &bt BT_SEL 2
+&trans  &trans    &kp RALT  &trans     &trans     &trans        &out OUT_BLE  &bt BT_SEL 0       &bt BT_PRV    &bt BT_NXT    &bt BT_CLR        &bt BT_SEL 3
                             &trans     &trans     &trans        &cp C_STOP    &cp C_PLAY         &cp C_MUTE
             >;
         };
