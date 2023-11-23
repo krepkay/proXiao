@@ -9,17 +9,16 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Layer Definitions
-#define COLEMAK 0
-#define QWERTY 1
-#define GAMING_COLEMAK 2
-#define GAMING_QWERTY 3
-#define LAYERS 4
-#define NAV 5
-#define WM 6
-#define MEDIA 7
-#define NUM 8
-#define SYM 9
-#define FN 10
+#define QWERTY 0
+#define COLEMAK 1
+#define GAMING 2
+#define LAYERS 3
+#define NAV 4
+#define WM 5
+#define MEDIA 6
+#define NUM 7
+#define SYM 8
+#define FN 9
 
 // Behavior configuration
 &mt {
@@ -42,11 +41,11 @@
     keymap {
         compatible = "zmk,keymap";
 
-        colemak {
+        qwerty {
 // -----------------------------------------------------------------------------------------------------------------------------
-// |        |   Q    |   W    |     F     |     P     |     B     | # |     J     |    L     |    U    |    Y   |   '    |     |
-// | LAYERS | A/LGUI | R/LALT |  S/LCTRL  |  T/LSHFT  |     G     | # |     M     | N/LSHFT  | E/LCTRL | I/LALT | O/LGUI |     |
-// |        |   Z    | X/RALT |     C     |     D     |     V     | # |     K     |    H     |    ,    | ./RALT |   /    |     |
+// |        |   Q    |   W    |     E     |     R     |     T     | # |     Y     |     U    |    I    |    O   |   P    |     |
+// | LAYERS | A/LGUI | S/LALT |  D/LCTRL  |  F/LSHFT  |     G     | # |     H     | J/LSHFT  | K/LCTRR | L/LALT | ;/LGUI |     |
+// |        |   Z    | X/RALT |     C     |     V     |     B     | # |     N     |     M    |    ,    | ./RALT |   /    |     |
 //                            | ESC/MEDIA | SPACE/NAV | TAB/WM    | # | ENTER/SYM | BSPC/NUM | DEL/FN  |
 
             bindings = <
@@ -57,11 +56,11 @@
             >;
         };
 
-        qwerty {
+        colemak {
 // -----------------------------------------------------------------------------------------------------------------------------
-// |        |   Q    |   W    |     E     |     R     |     T     | # |     Y     |     U    |    I    |    O   |   P    |     |
-// | LAYERS | A/LGUI | S/LALT |  D/LCTRL  |  F/LSHFT  |     G     | # |     H     | J/LSHFT  | K/LCTRR | L/LALT | ;/LGUI |     |
-// |        |   Z    | X/RALT |     C     |     V     |     B     | # |     N     |     M    |    ,    | ./RALT |   /    |     |
+// |        |   Q    |   W    |     F     |     P     |     B     | # |     J     |    L     |    U    |    Y   |   '    |     |
+// | LAYERS | A/LGUI | R/LALT |  S/LCTRL  |  T/LSHFT  |     G     | # |     M     | N/LSHFT  | E/LCTRL | I/LALT | O/LGUI |     |
+// |        |   Z    | X/RALT |     C     |     D     |     V     | # |     K     |    H     |    ,    | ./RALT |   /    |     |
 //                            | ESC/MEDIA | SPACE/NAV | TAB/WM    | # | ENTER/SYM | BSPC/NUM | DEL/FN  |
 
             bindings = <
@@ -72,11 +71,11 @@
             >;
         };
 
-        gaming_colemak {
+        gaming {
 // ----------------------------------------------------------------------------------------------------
-// |        |   Q   |   W   |   F   |   P   |   B   | # |   J   |   L   |   U   |   Y   |   '   |     |
-// | LAYERS |   A   |   R   |   S   |   T   |   G   | # |   M   |   N   |   E   |   I   |   O   |     |
-// |        |   Z   |   X   |   C   |   D   |   V   | # |   K   |   H   |   ,   |   .   |   /   |     |
+// |        |   Q   |   W   |   E   |   R   |   T   | # |   Y   |   U   |   I   |   O   |   P   |     |
+// | LAYERS |   A   |   S   |   D   |   F   |   G   | # |   H   |   J   |   K   |   L   |   ;   |     |
+// |        |   Z   |   X   |   C   |   V   |   B   | # |   N   |   M   |   ,   |   .   |   /   |     |
 //                          |  ESC  | SPACE |  TAB  | # | ENTER | BSPC  |  DEL  |
 
             bindings = <
@@ -87,36 +86,20 @@
             >;
         };
 
-        gaming_qwerty {
-// ----------------------------------------------------------------------------------------------------
-// |        |   Q   |   W   |   E   |   R   |   T   | # |   Y   |   U   |   I   |   O   |   P   |     |
-// | LAYERS |   A   |   S   |   D   |   F   |   G   | # |   H   |   J   |   K   |   L   |   ;   |     |
-// |        |   Z   |   X   |   C   |   V   |   B   | # |   N   |   M   |   ,   |   .   |   /   |     |
-//                          |  ESC  | SPACE |  TAB  | # | ENTER | BSPC  |  DEL  |
-
-            bindings = <
-&trans      &kp Q  &kp W  &kp K    &kp S      &kp F          &kp O      &kp I     &kp L     &kp SEMI  &kp R     &trans
-&mo LAYERS  &kp A  &kp D  &kp V    &kp E      &kp G          &kp M      &kp Y     &kp N     &kp U     &kp SQT   &trans
-&trans      &kp Z  &kp X  &kp C    &kp B      &kp T          &kp J      &kp H     &kp CMMA  &kp DOT   &kp FSLH  &trans
-                      &kp ESC  &kp SPACE  &kp TAB        &kp ENTER  &kp BSPC  &kp DEL
-            >;
-        };
-
         layers {
-// ---------------------------------------------------------------------------------------------
-// |      |     |     |     |     |     | # |     |     |         |                |     |     |
-// | HELD |     |     |     |     |     | # |     |     | COLEMAK | GAMING_COLEMAK |     |     |
-// |      |     |     |     |     |     | # |     |     | QWERTY  | GAMING_QWERTY  |     |     |
-//                    |     |     |     | # |     |     |         |
+// ----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     | # |     |        |         |        |     |     |
+// | HELD |     |     |     |     |     | # |     | QWERTY | COLEMAK | GAMING |     |     |
+// |      |     |     |     |     |     | # |     |        |         |        |     |     |
+//                    |     |     |     | # |     |        |         |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans       &trans              &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &to COLEMAK  &to GAMING_COLEMAK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &to QWERTY   &to GAMING_QWERTY   &trans  &trans
-                        &trans  &trans  &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans      &trans       &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans  &to QWERTY  &to COLEMAK  &to GAMING  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans      &trans       &trans      &trans
+                        &trans  &trans  &trans        &trans  &trans      &trans
             >;
         };
-
 
         navigation {
 // --------------------------------------------------------------------------------------------
@@ -145,7 +128,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans     &trans     &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
-&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans     &trans     &kp RALT  &trans    &trans
                         &trans  &trans  &trans        &trans  &trans     &trans
             >;
         };
