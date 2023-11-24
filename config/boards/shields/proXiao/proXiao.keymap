@@ -128,7 +128,7 @@
             bindings = <
 &trans  &trans     &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(F)        &trans  &trans     &trans     &trans    &trans    &trans
 &trans  &kp LG(A)  &kp LG(1)  &kp LG(2)  &kp LG(3)  &kp LG(R)        &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
-&trans  &kp LG(x)  &kp LG(4)  &kp LG(5)  &kp LG(6)  &trans           &trans  &trans     &trans     &kp RALT  &trans    &trans
+&trans  &kp LG(X)  &kp LG(4)  &kp LG(5)  &kp LG(6)  &trans           &trans  &trans     &trans     &kp RALT  &trans    &trans
                               &trans     &trans     &trans           &trans  &trans     &trans
             >;
         };
