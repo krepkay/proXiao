@@ -120,16 +120,16 @@
 
         wm {
 // -----------------------------------------------------------------------------------------
-// |     |      | WINQ | WINW | WINE | WINF | # |      |       |       |      |      |     |
-// |     | WINA | WIN1 | WIN2 | WIN3 | WINR | # |      | LSHFT | LCTRL | LALT | LGUI |     |
+// |     |      | WINQ | WINW | WINE | WINR | # |      |       |       |      |      |     |
+// |     | WINA | WIN1 | WIN2 | WIN3 | WINF | # |      | LSHFT | LCTRL | LALT | LGUI |     |
 // |     | WINX | WIN4 | WIN5 | WIN6 |      | # |      |       |       | RALT |      |     |
 //                     |      |      | HELD | # |      |       |       |
 
             bindings = <
-&trans  &trans     &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(F)        &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &kp LG(A)  &kp LG(1)  &kp LG(2)  &kp LG(3)  &kp LG(R)        &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
-&trans  &kp LG(X)  &kp LG(4)  &kp LG(5)  &kp LG(6)  &trans           &trans  &trans     &trans     &kp RALT  &trans    &trans
-                              &trans     &trans     &trans           &trans  &trans     &trans
+&trans  &trans     &kp LG(Q)   &kp LG(W)   &kp LG(E)   &kp LG(R)        &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp LG(A)  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(F)        &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
+&trans  &kp LG(X)  &kp LG(N4)  &kp LG(N5)  &kp LG(N6)  &trans           &trans  &trans     &trans     &kp RALT  &trans    &trans
+                               &trans      &trans      &trans           &trans  &trans     &trans
             >;
         };
 
