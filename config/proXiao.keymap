@@ -8,6 +8,11 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#include "includes/settings.dtsi"
+#include "includes/behaviours_homerow_mods.dtsi"
+
+#include "../zmk-nodefree-config-main/helper.h"
+
 // Layer Definitions
 #define QWERTY 0
 #define COLEMAK 1
@@ -20,21 +25,7 @@
 #define SYM 8
 #define FN 9
 
-// Behavior configuration
-&mt {
-    tapping-term-ms = <200>;
-    quick_tap_ms = <0>;
-    flavor = "tap-preferred";
-};
-&lt {
-    tapping-term-ms = <200>;
-    quick_tap_ms = <0>;
-    flavor = "tap-preferred";
-};
-&sk {
-    release-after-ms = <500>;
-    quick-release;
-};
+#define ___ &trans
 
 // Keymap configuration (Colemak-DHm)
 / {
