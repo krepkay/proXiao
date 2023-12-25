@@ -103,16 +103,16 @@
 
         navigation {
 // --------------------------------------------------------------------------------------------
-// |     |      | PASTE | COPY  | CUT   |     | # | CAPS  | CUT  | COPY | PASTE | UNDO  |     |
-// |     | LGUI | LALT  | LCTRL | LSHFT |     | # | LEFT  | DOWN | UP   | RIGHT | REDO  |     |
-// |     |      | RALT  |       |       |     | # | INS   | HOME | PGDN | PGUP  | END   |     |
-//                      |       | HELD  |     | # | ENTER | BSPC | DEL  |
+// |     | UNDO | PASTE | COPY  | CUT   | REDO | # | CAPS  | PGUP | UP   | PGDN  |      |     |
+// |     | LGUI | LALT  | LCTRL | LSHFT |      | # | HOME  | LEFT | DOWN | RIGHT | END  |     |
+// |     |      | RALT  |       |       |      | # | INS   |      |      |       |      |     |
+//                      |       | HELD  |      | # | ENTER | BSPC | DEL  |
 
             bindings = <
-&trans  &trans    &kp K_PASTE  &kp K_COPY  &kp K_CUT  &trans        &kp CAPSLOCK  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_UNDO  &trans
-&trans  &kp LGUI  &kp LALT     &kp LCTRL   &kp LSHFT  &trans        &kp LEFT      &kp DOWN   &kp UP      &kp RIGHT    &kp K_REDO  &trans
-&trans  &trans    &kp RALT     &trans      &trans     &trans        &kp INS       &kp HOME   &kp PG_DN   &kp PG_UP    &kp END     &trans
-                               &trans      &trans     &trans        &kp ENTER     &kp BSPC   &kp DEL
+&trans  &kp K_UNDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_REDO        &kp CAPSLOCK  &kp PG_UP  &kp UP    &kp PG_DOWN  &trans   &trans
+&trans  &kp LGUI    &kp LALT     &kp LCTRL   &kp LSHFT  &trans            &kp HOME      &kp LEFT   &kp DOWN  &kp RIGHT    &kp END  &trans
+&trans  &trans      &kp RALT     &trans      &trans     &trans            &kp INS       &trans     &trans    &trans       &trans   &trans
+                                 &trans      &trans     &trans            &kp ENTER     &kp BSPC   &kp DEL
             >;
         };
 
@@ -151,7 +151,7 @@
         numbers {
 // -----------------------------------------------------------------------------------
 // |     |  [  |  7  |  8  |  9  |  ]  | # |     |       |       |      |      |     |
-// |     |  ;  |  4  |  5  |  6  |  =  | # |     | LSHFT | LCTRL | LALT | LGUI |     |
+// |     |  '  |  4  |  5  |  6  |  =  | # |     | LSHFT | LCTRL | LALT | LGUI |     |
 // |     |  `  |  1  |  2  |  3  |  \  | # |     |       |       | RALT |      |     |
 //                   |  .  |  0  |  -  | # |     | HELD  |       |
 
@@ -166,7 +166,7 @@
         symbols {
 // ------------------------------------------------------------------------------------
 // |     |  {  |  &  |  *  |  (  |  }  | # |      |       |       |      |      |     |
-// |     |  :  |  $  |  %  |  ^  |  +  | # |      | LSHFT | LCTRL | LALT | LGUI |     |
+// |     |  "  |  $  |  %  |  ^  |  +  | # |      | LSHFT | LCTRL | LALT | LGUI |     |
 // |     |  ~  |  !  |  @  |  #  |  |  | # |      |       |       | RALT |      |     |
 //                   |  (  |  )  |  _  | # | HELD |       |       |
 
