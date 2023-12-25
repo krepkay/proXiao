@@ -11,7 +11,7 @@
 #include "includes/settings.dtsi"
 #include "includes/behaviours_homerow_mods.dtsi"
 
-#include "../zmk-nodefree-config-main/helper.h"
+#include "../zmk-nodefree-config/helper.h"
 
 // Layer Definitions
 #define QWERTY 0
