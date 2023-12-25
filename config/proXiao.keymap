@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #include "includes/settings.dtsi"
-#include "includes/behaviours_homerow_mods.dtsi"
+// #include "includes/behaviours_homerow_mods.dtsi"
 
 // Layer Definitions
 #define QWERTY 0
