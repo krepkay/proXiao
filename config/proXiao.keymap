@@ -27,6 +27,7 @@
 #define FN 9
 
 #define ___ &trans
+#define QUICK_TAP_MS 175
 
 // Keymap configuration (Colemak-DHm)
 / {
