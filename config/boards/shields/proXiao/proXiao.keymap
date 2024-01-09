@@ -109,10 +109,10 @@
 //                      |       | HELD  |      | # | ENTER | BSPC | DEL  |
 
             bindings = <
-&trans  &kp K_UNDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_REDO        &kp CAPSLOCK  &kp PG_UP  &kp UP    &kp PG_DN  &trans   &trans
-&trans  &kp LGUI    &kp LALT     &kp LCTRL   &kp LSHFT  &trans            &kp HOME      &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &trans
-&trans  &trans      &kp RALT     &trans      &trans     &trans            &kp INS       &trans     &trans    &trans     &trans   &trans
-                                 &trans      &trans     &trans            &kp ENTER     &kp BSPC   &kp DEL
+&trans  &kp C_AC_UNDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp C_AC_REDO        &kp CAPSLOCK  &kp PG_UP  &kp UP    &kp PG_DN  &trans   &trans
+&trans  &kp LGUI       &kp LALT     &kp LCTRL   &kp LSHFT  &trans               &kp HOME      &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &trans
+&trans  &trans         &kp RALT     &trans      &trans     &trans               &kp INS       &trans     &trans    &trans     &trans   &trans
+                                    &trans      &trans     &trans               &kp ENTER     &kp BSPC   &kp DEL
             >;
         };
 
