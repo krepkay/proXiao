@@ -103,13 +103,13 @@
 
         navigation {
 // --------------------------------------------------------------------------------------------
-// |     | UNDO | PASTE | COPY  | CUT   | REDO | # | CAPS  | PGUP | UP   | PGDN  |      |     |
+// |     | UNDO | PASTE | COPY  | CUT   | REDO | # | CAPS  | PGDN | UP   | PGUP  |      |     |
 // |     | LGUI | LALT  | LCTRL | LSHFT |      | # | HOME  | LEFT | DOWN | RIGHT | END  |     |
 // |     |      | RALT  |       |       |      | # | INS   |      |      |       |      |     |
 //                      |       | HELD  |      | # | ENTER | BSPC | DEL  |
 
             bindings = <
-&trans  &kp LC(Z)  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp LC(Y)        &kp CAPSLOCK  &kp PG_UP  &kp UP    &kp PG_DN  &trans   &trans
+&trans  &kp LC(Z)  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp LC(Y)        &kp CAPSLOCK  &kp PG_DN  &kp UP    &kp PG_UP  &trans   &trans
 &trans  &kp LGUI   &kp LALT     &kp LCTRL   &kp LSHFT  &trans           &kp HOME      &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &trans
 &trans  &trans     &kp RALT     &trans      &trans     &trans           &kp INS       &trans     &trans    &trans     &trans   &trans
                                 &trans      &trans     &trans           &kp ENTER     &kp BSPC   &kp DEL
@@ -135,13 +135,13 @@
 
         media {
 // -------------------------------------------------------------------------------------------------------
-// |     |      |      |      |       | BOOTLOAD | # | BOOTLOAD | BR_UP | VOL_UP | BR_DN | EP_ON  | BT_1 |
+// |     |      |      |      |       | BOOTLOAD | # | BOOTLOAD | BR_DN | VOL_UP | BR_UP | EP_ON  | BT_1 |
 // |     |      |      |      |       | RESET    | # | RESET    | PREV  | VOL_DN | NEXT  | EP_OFF | BT_2 |
 // |     |      |      |      |       | OUT_BLE  | # | BT_0     | BT_1  | BT_2   | BT_3  | BT_CLR | BT_3 |
 //                     | HELD |       |          | # | STOP     | PLAY  | MUTE   |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &bootloader        &bootloader   &cp C_BRI_UP  &cp C_VOL_UP  &cp C_BRI_DN  &ext_power EP_ON   &bt BT_SEL 1
+&trans  &trans  &trans  &trans  &trans  &bootloader        &bootloader   &cp C_BRI_DN  &cp C_VOL_UP  &cp C_BRI_UP  &ext_power EP_ON   &bt BT_SEL 1
 &trans  &trans  &trans  &trans  &trans  &sys_reset         &sys_reset    &cp C_PREV    &cp C_VOL_DN  &cp C_NEXT    &ext_power EP_OFF  &bt BT_SEL 2
 &trans  &trans  &trans  &trans  &trans  &out OUT_BLE       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR         &bt BT_SEL 3
                         &trans  &trans  &trans             &cp C_STOP    &cp C_PLAY    &cp C_MUTE
