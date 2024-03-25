@@ -41,9 +41,10 @@
     combos {
         compatible = "zmk,combos";
         combo_enter {
-            timeout-ms = <300>;
-            key-positions = <3 4>;
             bindings = <&kp ENTER>;
+            key-positions = <3 4>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
         };
     };
 
@@ -124,7 +125,7 @@
 
         navigation {
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
-// │            │ UNDO       │ PASTE      │ COPY       │ CUT        │ REDO       │   │ CAPS       │ PGDN       │ UP         │ PGUP       │            │            │
+// │            │ UNDO       │ PASTE      │ COPY       │ CUT        │ REDO       │   │ CAPS       │ PGDN       │ UP         │ PGUP       │ CPS_WRD    │            │
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // │            │ LGUI       │ LALT       │ LCTRL      │ LSHFT      │            │   │ HOME       │ LEFT       │ DOWN       │ RIGHT      │ END        │            │
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
@@ -133,9 +134,9 @@
 //                                        │            │ HELD       │            │   │ ENTER      │ BSPC       │ DEL        │
 //                                        ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴────────────╯
             bindings = <
-&trans  &kp LC(Z)  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp LC(Y)                       &kp CAPSLOCK  &kp PG_DN  &kp UP    &kp PG_UP  &trans   &trans
-&trans  &kp LGUI   &kp LALT     &kp LCTRL   &kp LSHFT  &trans                          &kp HOME      &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &trans
-&trans  &trans     &trans       &trans      &trans     &trans                          &kp INS       &trans     &trans    &trans     &trans   &trans
+&trans  &kp LC(Z)  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp LC(Y)                       &kp CAPSLOCK  &kp PG_DN  &kp UP    &kp PG_UP  &caps_word  &trans
+&trans  &kp LGUI   &kp LALT     &kp LCTRL   &kp LSHFT  &trans                          &kp HOME      &kp LEFT   &kp DOWN  &kp RIGHT  &kp END     &trans
+&trans  &trans     &trans       &trans      &trans     &trans                          &kp INS       &trans     &trans    &trans     &trans      &trans
                                 &trans      &trans     &trans                          &kp ENTER     &kp BSPC   &kp DEL
             >;
         };
