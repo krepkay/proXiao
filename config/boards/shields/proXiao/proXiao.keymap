@@ -21,7 +21,7 @@
 #define FN 9
 
 #define COMBO_PRIOR_IDLE 50
-#define COMBO_TIMEOUT_MS 75
+#define COMBO_TIMEOUT_MS 50
 
 // Functions
 #define COMBO(NAME, BINDINGS, KEYPOS, IDLE, MS) \
