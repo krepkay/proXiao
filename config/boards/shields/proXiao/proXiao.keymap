@@ -54,14 +54,13 @@
 / {
     combos {
         compatible = "zmk,combos";
-        COMBO(enter, &kp ENTER,  3 4,   COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
-        COMBO(caps,  &caps_word, 13 14, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
-        COMBO(lpar,  &kp LPAR,   15 16, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
-        COMBO(rpar,  &kp RPAR,   19 20, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
-        COMBO(lbkt, &kp LBKT,   14 15, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
-        COMBO(rbkt, &kp RBKT,   20 21, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
-        COMBO(lbrc, &kp LBRC,   14 16, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
-        COMBO(rbrc, &kp RBRC,   19 21, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(caps, &caps_word, 10 11, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(lpar, &kp LPAR,   3 4,   COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(rpar, &kp RPAR,   7 8,   COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(lbkt, &kp LBKT,   2 3,   COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(rbkt, &kp RBKT,   8 9,   COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(lbrc, &kp LBRC,   2 4,   COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(rbrc, &kp RBRC,   7 9,   COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
     };
 
     keymap {
@@ -145,14 +144,14 @@
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // │            │ LGUI       │ LALT       │ LCTRL      │ LSHFT      │            │   │ HOME       │ LEFT       │ DOWN       │ RIGHT      │ END        │            │
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// │            │            │            │            │            │            │   │ INS        │            │            │            │            │            │
+// │            │            │            │            │ ENTER      │            │   │ INS        │            │            │            │            │            │
 // ╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┴────────────┴────────────╯
 //                                        │            │ HELD       │            │   │ ENTER      │ BSPC       │ DEL        │
 //                                        ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴────────────╯
             bindings = <
 &trans  &kp LC(Z)  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp LC(Y)                       &kp CAPSLOCK  &kp PG_DN  &kp UP    &kp PG_UP  &caps_word  &trans
 &trans  &kp LGUI   &kp LALT     &kp LCTRL   &kp LSHFT  &trans                          &kp HOME      &kp LEFT   &kp DOWN  &kp RIGHT  &kp END     &trans
-&trans  &trans     &trans       &trans      &trans     &trans                          &kp INS       &trans     &trans    &trans     &trans      &trans
+&trans  &trans     &trans       &trans      &kp ENTER  &trans                          &kp INS       &trans     &trans    &trans     &trans      &trans
                                 &trans      &trans     &trans                          &kp ENTER     &kp BSPC   &kp DEL
             >;
         };
