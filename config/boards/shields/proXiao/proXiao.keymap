@@ -20,17 +20,31 @@
 #define SYM 8
 #define FN 9
 
+#define COMBO_PRIOR_IDLE 50
+#define COMBO_TIMEOUT_MS 75
+
+// Functions
+#define COMBO(NAME, BINDINGS, KEYPOS, IDLE, MS) \
+    combo_##NAME { \
+        bindings = <BINDINGS>; \
+        key-positions = <KEYPOS>; \
+        require-prior-idle-ms = <IDLE>; \
+        timeout-ms = <MS>; \
+    };
+
 // Behavior configuration
-&mt {
-    tapping-term-ms = <200>;
-    quick_tap_ms = <0>;
-    flavor = "tap-preferred";
-};
 &lt {
     tapping-term-ms = <200>;
     quick_tap_ms = <0>;
     flavor = "tap-preferred";
 };
+
+&mt {
+    tapping-term-ms = <200>;
+    quick_tap_ms = <0>;
+    flavor = "tap-preferred";
+};
+
 &sk {
     release-after-ms = <500>;
     quick-release;
@@ -40,12 +54,7 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_enter {
-            bindings = <&kp ENTER>;
-            key-positions = <3 4>;
-            require-prior-idle-ms = <50>;
-            timeout-ms = <75>;
-        };
+        COMBO(enter, &kp ENTER, 3 4, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
     };
 
     keymap {
@@ -165,7 +174,7 @@
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // │            │            │            │            │            │ RESET      │   │ RESET      │ PREV       │ VOL_DN     │ NEXT       │ EP_OFF     │ BT_2       │
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// │            │            │            │            │            │ OUT_BLE    │   │ BT_0       │ BT_1       │  BT_2      │ BT_3       │ BT_CLR     │ BT_3       │
+// │            │            │            │            │            │ OUT_BLE    │   │ BT_0       │ BT_1       │ BT_2       │ BT_3       │ BT_CLR     │ BT_3       │
 // ╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┴────────────┴────────────╯
 //                                        │ HELD       │            │            │   │ STOP       │ PLAY       │ MUTE       │
 //                                        ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴────────────╯
