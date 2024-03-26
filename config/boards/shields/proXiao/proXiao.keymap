@@ -54,7 +54,14 @@
 / {
     combos {
         compatible = "zmk,combos";
-        COMBO(enter, &kp ENTER, 3 4, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(enter, &kp ENTER,  3 4,   COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(caps,  &caps_word, 13 14, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(round, &kp LPAR,   15 16, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(round, &kp RPAR,   19 20, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(round, &kp LBKT,   14 15, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(round, &kp RBKT,   20 21, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(round, &kp LBRC,   14 16, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(round, &kp RBRC,   19 21, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
     };
 
     keymap {
