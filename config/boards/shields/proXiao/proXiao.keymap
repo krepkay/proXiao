@@ -21,7 +21,7 @@
 #define FN 9
 
 #define COMBO_PRIOR_IDLE 50
-#define COMBO_TIMEOUT_MS 50
+#define COMBO_TIMEOUT_MS 25
 
 // Functions
 #define COMBO(NAME, BINDINGS, KEYPOS, IDLE, MS) \
@@ -54,7 +54,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-        COMBO(caps, &caps_word, 9 10, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
         COMBO(lpar, &kp LPAR,   3 4,  COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
         COMBO(rpar, &kp RPAR,   7 8,  COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
         COMBO(lbkt, &kp LBKT,   2 3,  COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
