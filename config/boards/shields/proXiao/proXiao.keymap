@@ -50,6 +50,10 @@
     quick-release;
 };
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
 // Keymap configuration (Colemak-DHm)
 / {
     combos {
@@ -69,7 +73,7 @@
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
 // │            │ Q          │ W          │ E          │ R          │ T          │   │ Y          │ U          │ I          │ O          │ P          │            │
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// │ LAYERS     │ A/LGUI     │ S/LALT     │ D/LCTRL    │ F/LSHFT    │ G          │   │ H          │ J/LSHFT    │ K/LCTRL    │ L/LALT     │ ;/LGUI     │            │
+// │ LAYERS     │ A/LGUI     │ S/LALT     │ D/LCTRL    │ F/LSHFT    │ G          │   │ H          │ J/LSHFT    │ K/LCTRL    │ L/LALT     │ ;/LGUI     │ LANG       │
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // │            │ Z          │ X          │ C          │ V          │ B          │   │ N          │ M          │ ,          │ .          │ /          │            │
 // ╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┴────────────┴────────────╯
@@ -77,7 +81,7 @@
 //                                        ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴────────────╯
             bindings = <
 &trans      &kp Q       &kp W       &kp E          &kp R          &kp T                &kp Y          &kp U         &kp I          &kp O         &kp P          &trans
-&mo LAYERS  &mt LGUI A  &mt LALT S  &mt LCTRL D    &mt LSHFT F    &kp G                &kp H          &mt LSHFT J   &mt LCTRL K    &mt LALT L    &mt LGUI SEMI  &trans
+&mo LAYERS  &mt LGUI A  &mt LALT S  &mt LCTRL D    &mt LSHFT F    &kp G                &kp H          &mt LSHFT J   &mt LCTRL K    &mt LALT L    &mt LGUI SEMI  &kp LG(SPACE)
 &trans      &kp Z       &kp X       &kp C          &kp V          &kp B                &kp N          &kp M         &kp CMMA       &kp DOT       &kp FSLH       &trans
                                     &lt MEDIA ESC  &lt NAV SPACE  &lt WM TAB           &lt SYM ENTER  &lt NUM BSPC  &lt FN DEL
             >;
