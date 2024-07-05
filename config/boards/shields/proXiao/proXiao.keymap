@@ -58,12 +58,14 @@
 / {
     combos {
         compatible = "zmk,combos";
+        COMBO(lout, &mo LAYERS, 1 2,  COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
         COMBO(lpar, &kp LPAR,   3 4,  COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
         COMBO(rpar, &kp RPAR,   7 8,  COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
         COMBO(lbkt, &kp LBKT,   2 3,  COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
         COMBO(rbkt, &kp RBKT,   8 9,  COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
         COMBO(lbrc, &kp LBRC,   2 4,  COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
         COMBO(rbrc, &kp RBRC,   7 9,  COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
+        COMBO(caps, &caps_word, 9 10, COMBO_PRIOR_IDLE, COMBO_TIMEOUT_MS)
     };
 
     keymap {
