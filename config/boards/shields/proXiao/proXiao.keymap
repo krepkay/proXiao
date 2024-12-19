@@ -17,8 +17,7 @@
 #define WM 5
 #define MEDIA 6
 #define NUM 7
-#define SYM 8
-#define FN 9
+#define FN 8
 
 #define COMBO_PRIOR_IDLE 50
 #define COMBO_TIMEOUT_MS 35
@@ -79,13 +78,13 @@
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // │            │ Z          │ X          │ C          │ V          │ B          │   │ N          │ M          │ ,          │ .          │ /          │            │
 // ╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┴────────────┴────────────╯
-//                                        │ ESC/MEDIA  │ SPACE/NAV  │ TAB/WM     │   │ ENTER/SYM  │ BSPC/NUM   │ DEL/FN     │
+//                                        │ ESC/MEDIA  │ SPACE/NAV  │ TAB/WM     │   │ ENTER      │ BSPC/NUM   │ DEL/FN     │
 //                                        ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴────────────╯
             bindings = <
 &trans      &kp Q       &kp W       &kp E          &kp R          &kp T                &kp Y          &kp U         &kp I          &kp O         &kp P          &trans
 &trans      &mt LGUI A  &mt LALT S  &mt LCTRL D    &mt LSHFT F    &kp G                &kp H          &mt LSHFT J   &mt LCTRL K    &mt LALT L    &mt LGUI SEMI  &kp LG(SPACE)
 &trans      &kp Z       &kp X       &kp C          &kp V          &kp B                &kp N          &kp M         &kp CMMA       &kp DOT       &kp FSLH       &trans
-                                    &lt MEDIA ESC  &lt NAV SPACE  &lt WM TAB           &lt SYM ENTER  &lt NUM BSPC  &lt FN DEL
+                                    &lt MEDIA ESC  &lt NAV SPACE  &lt WM TAB           &kp ENTER      &lt NUM BSPC  &lt FN DEL
             >;
         };
 
@@ -97,13 +96,13 @@
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // │            │ Z          │ X          │ C          │ D          │ V          │   │ K          │ H          │ ,          │ .          │ /          │            │
 // ╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┴────────────┴────────────╯
-//                                        │ ESC/MEDIA  │ SPACE/NAV  │ TAB/WM     │   │ ENTER/SYM  │ BSPC/NUM   │ DEL/FN     │
+//                                        │ ESC/MEDIA  │ SPACE/NAV  │ TAB/WM     │   │ ENTER      │ BSPC/NUM   │ DEL/FN     │
 //                                        ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴────────────╯
             bindings = <
 &trans      &kp Q       &kp W       &kp F          &kp P          &kp B                &kp J          &kp L         &kp U          &kp Y         &kp SQT     &trans
 &trans      &mt LGUI A  &mt LALT R  &mt LCTRL S    &mt LSHFT T    &kp G                &kp M          &mt LSHFT N   &mt LCTRL E    &mt LALT I    &mt LGUI O  &trans
 &trans      &kp Z       &kp X       &kp C          &kp D          &kp V                &kp K          &kp H         &kp CMMA       &kp DOT       &kp FSLH    &trans
-                                    &lt MEDIA ESC  &lt NAV SPACE  &lt WM TAB           &lt SYM ENTER  &lt NUM BSPC  &lt FN DEL
+                                    &lt MEDIA ESC  &lt NAV SPACE  &lt WM TAB           &kp ENTER      &lt NUM BSPC  &lt FN DEL
             >;
         };
 
@@ -212,24 +211,6 @@
 &trans  &kp SQT    &kp N4  &kp N5   &kp N6  &kp EQUAL                                  &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
 &trans  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH                                   &trans  &trans     &trans     &trans    &trans    &trans
                            &kp DOT  &kp N0  &kp MINUS                                  &trans  &trans     &trans
-            >;
-        };
-
-        symbols {
-// ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
-// │            │ {          │ &          │ *          │ (          │ }          │   │            │            │            │            │            │            │
-// ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// │            │ "          │ $          │ %          │ ^          │ +          │   │            │ LSHFT      │ LCTRL      │ LALT       │ LGUI       │            │
-// ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// │            │ ~          │ !          │ @          │ #          │ |          │   │            │            │            │            │            │            │
-// ╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┴────────────┴────────────╯
-//                                        │ (          │ )          │ _          │   │ HELD       │            │            │
-//                                        ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴────────────╯
-            bindings = <
-&trans  &kp LBRC   &kp AMPS  &kp ASTRK  &kp LPAR   &kp RBRC                            &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &kp DQT    &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS                            &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
-&trans  &kp TILDE  &kp EXCL  &kp AT     &kp HASH   &kp PIPE                            &trans  &trans     &trans     &trans    &trans    &trans
-                             &kp LPAR   &kp RPAR   &kp UNDERSCORE                      &trans  &trans     &trans
             >;
         };
 
