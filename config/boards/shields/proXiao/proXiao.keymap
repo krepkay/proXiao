@@ -54,7 +54,7 @@
 };
 
 &num_word {
-    continue-list = <BSPC DEL DOT COMMA MINUS LS(MINUS) LS(N8) FSLH BSLH EQUAL LS(EQUAL) LS(COLON)>;
+    continue-list = <BSPC DEL DOT COMMA PLUS MINUS FSLH BSLH EQUAL UNDERSCORE COLON>;
     ignore-modifiers;
 };
 
