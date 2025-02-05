@@ -9,6 +9,18 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <behaviors/num_word.dtsi>
 
+/ {
+    behaviors {
+        num_wrd: num_wrd {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-num-word";
+            layers = <7>;
+            continue-list = <UNDERSCORE BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+            ignore-numbers;
+        };
+    };
+};
+
 // Layer Definitions
 #define QWERTY 0
 #define COLEMAK 1
@@ -51,11 +63,6 @@
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-};
-
-&num_word {
-    layers = <7>;
-    continue-list = <UNDERSCORE BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
 
 // Keymap configuration (Colemak-DHm)
@@ -213,7 +220,7 @@
 //                                        │ .          │ 0          │ -          │   │            │ HELD       │            │
 //                                        ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴────────────╯
             bindings = <
-&trans  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT                                   &trans  &trans      &trans     &trans    &num_word  &trans
+&trans  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT                                   &trans  &trans      &trans     &trans    &num_wrd   &trans
 &trans  &kp SQT    &kp N4  &kp N5   &kp N6  &kp EQUAL                                  &trans  &kp LSHFT   &kp LCTRL  &kp LALT  &kp LGUI   &trans
 &trans  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH                                   &trans  &key_repeat &trans     &trans    &trans     &trans
                            &kp DOT  &kp N0  &kp MINUS                                  &trans  &trans      &trans
