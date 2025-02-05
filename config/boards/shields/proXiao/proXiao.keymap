@@ -158,7 +158,7 @@
 //                                        │            │ HELD       │            │   │ ENTER      │ BSPC       │ DEL        │
 //                                        ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴────────────╯
             bindings = <
-&trans  &kp LC(Z)  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp LC(Y)                       &kp CAPSLOCK  &kp PG_DN  &kp UP    &kp PG_UP  &caps_word  &trans
+&trans  &kp LC(Z)  &kp LC(V)    &kp LC(C)   &kp LC(X)  &kp LC(Y)                       &kp CAPSLOCK  &kp PG_DN  &kp UP    &kp PG_UP  &caps_word  &trans
 &trans  &kp LGUI   &kp LALT     &kp LCTRL   &kp LSHFT  &kp PSCRN                       &kp HOME      &kp LEFT   &kp DOWN  &kp RIGHT  &kp END     &trans
 &trans  &trans     &trans       &kp DEL     &kp ENTER  &kp BSPC                        &kp INS       &trans     &trans    &trans     &trans      &trans
                                 &trans      &trans     &trans                          &kp ENTER     &kp BSPC   &kp DEL
